@@ -231,7 +231,7 @@ select {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100dvh;
+  height: 100%;
 }
 
 @media (min-width: 35em) {
@@ -260,7 +260,7 @@ select {
 }
 
 header {
-  padding: 1em 0;
+  padding: 1em 2em 1em 0;
 }
 
 .nav {
@@ -353,6 +353,9 @@ header {
 /* Hero Starts Here */
 
 .hero {
+  flex-direction: column;
+  justify-content: start;
+  gap: clamp(1.5rem, 5vw, 3.4375rem);
   max-width: 750px;
   margin-inline: auto;
   padding-inline: auto;
@@ -421,6 +424,7 @@ header {
 @media (max-width: 824px) {
   .mobile-navigation {
     display: block;
+    z-index: 100000;
   }
 
   #primary-navigation {
@@ -539,5 +543,172 @@ header {
   ul {
     padding: 0;
     list-style-type: none;
+  }
+}
+
+/* Search  Section*/
+
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 1.4rem 2rem 1.6rem;
+  background-color: #24343d;
+}
+.search .search-input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  color: hsl(var(--clr-white));
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  outline: none;
+  &::-webkit-input-placeholder {
+    color: hsl(var(--clr-white) / 0.6);
+  }
+}
+
+.search button {
+  position: absolute;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color 0.25s;
+  cursor: pointer;
+  &:hover {
+    color: rgba(97, 149, 197, 0.274);
+  }
+}
+
+/* Cards */
+
+/* General styles */
+.cards {
+  margin-inline: auto;
+  margin-block: 10rem;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  background-color: #24353e;
+  border-radius: 20px;
+  padding-top: 200px;
+  padding-bottom: 20px;
+  padding-inline: 52px;
+  width: 327px;
+  min-height: 440px;
+  margin-bottom: 5rem;
+}
+
+/* Pseudo-element for blurring background */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  filter: blur(20px); /* Adjust the blur amount as needed */
+  z-index: -1; /* Ensure the pseudo-element is behind the card content */
+}
+
+/* Image positioning */
+.card img {
+  z-index: 1;
+  position: absolute;
+  bottom: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  filter: drop-shadow(-5mm 0 2.125rem rgb(155, 149, 157));
+}
+
+/* Card content styling */
+.card__content {
+  margin-top: -3em;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2em;
+}
+
+.card__content h3 {
+  font-family: poppins;
+  font-size: 2rem;
+  color: hsl(var(--clr-white));
+  font-weight: bold;
+}
+
+.card__content .day .degree {
+  font-weight: lighter;
+}
+
+.card__content .weather-info {
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5em;
+  margin-top: -3rem;
+  font-size: 25px;
+}
+
+/* @media (min-width: 624px) {
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    margin-inline: -.2rem;
+  gap: 2rem;
+  
+    }
+
+    .card {
+        margin-bottom: 8rem;
+    }
+}
+
+@media (min-width: 825px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+    margin-inline: auto;
+  
+    }
+
+    .card {
+        margin-bottom: 8rem;
+    }
+} */
+
+@media (min-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    margin-inline: auto;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktops */
+    margin-inline: auto;
   }
 }

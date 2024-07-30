@@ -59,11 +59,62 @@
       </div>
     </header>
 
-    <div class="hero container">
+    <div class="hero container flex">
       <h2 class="hero__content fs-700">
         Seeing the weather of the whole world with <span>Weather Me!</span>
       </h2>
+      <div class="search">
+        <input
+          type="text"
+          class="search-input"
+          id="Search-el"
+          placeholder="Search Here..."
+        />
+        <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
     </div>
+
+    <section class="cards-section container">
+        <div class="cards flex">
+            <div class="card flex">
+                <img src="assets/weather-icons/cloudy-sunny-rainy.png" alt="">
+                <div class="card__content flex">
+                    <h3 class="day">Tehran <span class="degree">35 <sup> °C</sup></span></h3>
+               <div class="weather-info flex">
+                <span>Wind speed: 11 km</span>
+                <span>Monday: 19:52</span>
+                <span>Cloudy</span>
+               </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/weather-icons/sunny.png" alt="">
+                <div class="card__content flex">
+                    <h3 class="day">Tehran <span class="degree">35 <sup> °C</sup></span></h3>
+               <div class="weather-info flex">
+                <span>Wind speed: 11 km</span>
+                <span>Monday: 19:52</span>
+                <span>Cloudy</span>
+               </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/weather-icons/sun-cloud.png" alt="">
+                <div class="card__content flex">
+                    <h3 class="day">Tehran <span class="degree">35 <sup> °C</sup></span></h3>
+               <div class="weather-info flex">
+                <span>Wind speed: 11 km</span>
+                <span>Monday: 19:52</span>
+                <span>Cloudy</span>
+               </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="index.js"></script>
   </body>
 </html>
