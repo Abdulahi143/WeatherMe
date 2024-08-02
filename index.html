@@ -28,13 +28,10 @@
           <ul class="nav__list nav__list--primary flex">
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
             <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Developer</a>
-            </li>
           </ul>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link nav__link--button">SignUp</a>
+              <a href="#" class="nav__link nav__link--button">Sign up</a>
             </li>
           </ul>
         </nav>
@@ -48,10 +45,9 @@
             <ul id="menu">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
-              <li><a href="#">Developer</a></li>
 
               <li class="nav__item">
-                <a href="#" class="nav__link nav__link--button">SignUp</a>
+                <a href="#" class="nav__link nav__link--button">Sign up</a>
               </li>
             </ul>
           </div>
@@ -63,57 +59,240 @@
       <h2 class="hero__content fs-700">
         Seeing the weather of the whole world with <span>Weather Me!</span>
       </h2>
-      <div class="search">
-        <input
-          type="text"
-          class="search-input"
-          id="Search-el"
-          placeholder="Search Here..."
-        />
-        <button type="submit">
+      <div class="search-filter flex">
+        <div class="search">
+          <input
+            type="text"
+            class="search-input"
+            id="Search-el"
+            placeholder="Search Here..."
+          />
+          <button type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+          </button>
+        </div>
+
+        <div class="filter-lg">
+          <span class="filter-text">Filter</span>
+          <div class="filter__second-mood">
+            <div class="select-container">
+              <select name="" id="weather-mood-1" class="select weather-mood">
+                <option value="coldest" class="mood">Coldest</option>
+                <option value="cold" class="mood">Cold</option>
+              </select>
+              <img
+                src="assets/shared/icons/arrows/arrow-down.png"
+                class="arrow arrow-down-1"
+                alt="arrow-down"
+              />
+              <img
+                src="assets/shared/icons/arrows/arrow-up.png"
+                class="arrow arrow-up-1"
+                style="display: none"
+                alt="arrow-up"
+              />
+            </div>
+          </div>
+
+          <div class="filter__degrees">
+            <div class="select-container">
+              <select
+                name=""
+                id="weather-degrees"
+                class="select weather-degrees"
+              >
+                <option value="minus10-0" class="mood">-10 °C—0 °C</option>
+                <option value="0-10" class="mood">0 °C—10 °C</option>
+                <option value="10-20" class="mood">10 °C—20 °C</option>
+              </select>
+              <img
+                src="assets/shared/icons/arrows/arrow-down.png"
+                class="arrow arrow-down-2"
+                alt="arrow-down"
+              />
+              <img
+                src="assets/shared/icons/arrows/arrow-up.png"
+                class="arrow arrow-up-2"
+                style="display: none"
+                alt="arrow-up"
+              />
+            </div>
+          </div>
+
+          <div class="filter__mood">
+            <div class="select-container">
+              <select name="" id="weather-mood-2" class="select weather-mood">
+                <option value="hottest" class="mood">Hottest</option>
+                <option value="hot" class="mood">Hot</option>
+              </select>
+              <img
+                src="assets/shared/icons/arrows/arrow-down.png"
+                class="arrow arrow-down-3"
+                alt="arrow-down"
+              />
+              <img
+                src="assets/shared/icons/arrows/arrow-up.png"
+                class="arrow arrow-up-3"
+                style="display: none"
+                alt="arrow-up"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <section class="cards-section container">
-        <div class="cards flex">
-            <div class="card flex">
-                <img src="assets/weather-icons/cloudy-sunny-rainy.png" alt="">
-                <div class="card__content flex">
-                    <h3 class="day">Tehran <span class="degree">35 <sup> °C</sup></span></h3>
-               <div class="weather-info flex">
-                <span>Wind speed: 11 km</span>
-                <span>Monday: 19:52</span>
-                <span>Cloudy</span>
-               </div>
-                </div>
+      <div class="cards flex">
+        <div class="card">
+          <img src="assets/weather-icons/cloudy-sunny-rainy.png" alt="" />
+          <div class="card__content flex">
+            <h3 class="day">
+              Tehran <span class="degree">35 <sup> °C</sup></span>
+            </h3>
+            <div class="weather-info flex">
+              <span>Wind speed: 11 km</span>
+              <span>Monday: 19:52</span>
+              <span>Cloudy</span>
             </div>
-
-            <div class="card">
-                <img src="assets/weather-icons/sunny.png" alt="">
-                <div class="card__content flex">
-                    <h3 class="day">Tehran <span class="degree">35 <sup> °C</sup></span></h3>
-               <div class="weather-info flex">
-                <span>Wind speed: 11 km</span>
-                <span>Monday: 19:52</span>
-                <span>Cloudy</span>
-               </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/weather-icons/sun-cloud.png" alt="">
-                <div class="card__content flex">
-                    <h3 class="day">Tehran <span class="degree">35 <sup> °C</sup></span></h3>
-               <div class="weather-info flex">
-                <span>Wind speed: 11 km</span>
-                <span>Monday: 19:52</span>
-                <span>Cloudy</span>
-               </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="card">
+          <img src="assets/weather-icons/sunny.png" alt="" />
+          <div class="card__content flex">
+            <h3 class="day">
+              Tehran <span class="degree">35 <sup> °C</sup></span>
+            </h3>
+            <div class="weather-info flex">
+              <span>Wind speed: 11 km</span>
+              <span>Monday: 19:52</span>
+              <span>Cloudy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/weather-icons/sun-cloud.png" alt="" />
+          <div class="card__content flex">
+            <h3 class="day">
+              Tehran <span class="degree">35 <sup> °C</sup></span>
+            </h3>
+            <div class="weather-info flex">
+              <span>Wind speed: 11 km</span>
+              <span>Monday: 19:52</span>
+              <span>Cloudy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/weather-icons/sunny.png" alt="" />
+          <div class="card__content flex">
+            <h3 class="day">
+              Tehran <span class="degree">35 <sup> °C</sup></span>
+            </h3>
+            <div class="weather-info flex">
+              <span>Wind speed: 11 km</span>
+              <span>Monday: 19:52</span>
+              <span>Cloudy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/weather-icons/cloudy-sunny-rainy.png" alt="" />
+          <div class="card__content flex">
+            <h3 class="day">
+              Tehran <span class="degree">35 <sup> °C</sup></span>
+            </h3>
+            <div class="weather-info flex">
+              <span>Wind speed: 11 km</span>
+              <span>Monday: 19:52</span>
+              <span>Cloudy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/weather-icons/sunny.png" alt="" />
+          <div class="card__content flex">
+            <h3 class="day">
+              Tehran <span class="degree">35 <sup> °C</sup></span>
+            </h3>
+            <div class="weather-info flex">
+              <span>Wind speed: 11 km</span>
+              <span>Monday: 19:52</span>
+              <span>Cloudy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <div class="filter">
+        <div class="filter__second-mood">
+          <div class="select-container">
+            <select name="" id="weather-mood-1" class="select weather-mood">
+              <option value="coldest" class="mood">Coldest</option>
+              <option value="cold" class="mood">Cold</option>
+            </select>
+            <img
+              src="assets/shared/icons/arrows/arrow-down.png"
+              class="arrow arrow-down-1"
+              alt="arrow-down"
+            />
+            <img
+              src="assets/shared/icons/arrows/arrow-up.png"
+              class="arrow arrow-up-1"
+              style="display: none"
+              alt="arrow-up"
+            />
+          </div>
+        </div>
+
+        <div class="filter__degrees">
+          <div class="select-container">
+            <select name="" id="weather-degrees" class="select weather-degrees">
+              <option value="minus10-0" class="mood">-10 °C—0 °C</option>
+              <option value="0-10" class="mood">0 °C—10 °C</option>
+              <option value="10-20" class="mood">10 °C—20 °C</option>
+            </select>
+            <img
+              src="assets/shared/icons/arrows/arrow-down.png"
+              class="arrow arrow-down-2"
+              alt="arrow-down"
+            />
+            <img
+              src="assets/shared/icons/arrows/arrow-up.png"
+              class="arrow arrow-up-2"
+              style="display: none"
+              alt="arrow-up"
+            />
+          </div>
+        </div>
+
+        <div class="filter__mood">
+          <div class="select-container">
+            <select name="" id="weather-mood-2" class="select weather-mood">
+              <option value="hottest" class="mood">Hottest</option>
+              <option value="hot" class="mood">Hot</option>
+            </select>
+            <img
+              src="assets/shared/icons/arrows/arrow-down.png"
+              class="arrow arrow-down-3"
+              alt="arrow-down"
+            />
+            <img
+              src="assets/shared/icons/arrows/arrow-up.png"
+              class="arrow arrow-up-3"
+              style="display: none"
+              alt="arrow-up"
+            />
+          </div>
+        </div>
+      </div>
     </section>
     <script src="index.js"></script>
   </body>
