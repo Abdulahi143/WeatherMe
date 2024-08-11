@@ -18,6 +18,9 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Weather Me!</title>
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/route.js" type="module"></script>
   </head>
   <body class="home">
     <header>
@@ -57,19 +60,27 @@
 
     <div class="hero container flex">
       <h2 class="hero__content fs-700">
-        Seeing the weather of the whole world with <span>Weather Me!</span>
+        Seeing the weather of the whole world with <br /><span
+          >Weather Me!</span
+        >
       </h2>
       <div class="search-filter flex">
-        <div class="search">
+        <div class="search-view" data-search-view>
           <input
             type="text"
+            name="search"
             class="search-input"
-            id="Search-el"
+            id="search-city-country"
+            autocomplete="off"
             placeholder="Search Here..."
+            data-search-field
           />
-          <button type="submit">
+          <button type="submit" id="btn">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
+          <div class="search-result" data-search-result>
+            <!-- Suggestions will be dynamically inserted here -->
+          </div>
         </div>
 
         <div class="filter-lg">
@@ -143,91 +154,19 @@
     </div>
 
     <section class="cards-section container">
-      <div class="cards flex">
-        <div class="card">
-          <img src="assets/weather-icons/cloudy-sunny-rainy.png" alt="" />
-          <div class="card__content flex">
-            <h3 class="day">
-              Tehran <span class="degree">35 <sup> °C</sup></span>
-            </h3>
-            <div class="weather-info flex">
-              <span>Wind speed: 11 km</span>
-              <span>Monday: 19:52</span>
-              <span>Cloudy</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/weather-icons/sunny.png" alt="" />
-          <div class="card__content flex">
-            <h3 class="day">
-              Tehran <span class="degree">35 <sup> °C</sup></span>
-            </h3>
-            <div class="weather-info flex">
-              <span>Wind speed: 11 km</span>
-              <span>Monday: 19:52</span>
-              <span>Cloudy</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/weather-icons/sun-cloud.png" alt="" />
-          <div class="card__content flex">
-            <h3 class="day">
-              Tehran <span class="degree">35 <sup> °C</sup></span>
-            </h3>
-            <div class="weather-info flex">
-              <span>Wind speed: 11 km</span>
-              <span>Monday: 19:52</span>
-              <span>Cloudy</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/weather-icons/sunny.png" alt="" />
-          <div class="card__content flex">
-            <h3 class="day">
-              Tehran <span class="degree">35 <sup> °C</sup></span>
-            </h3>
-            <div class="weather-info flex">
-              <span>Wind speed: 11 km</span>
-              <span>Monday: 19:52</span>
-              <span>Cloudy</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/weather-icons/cloudy-sunny-rainy.png" alt="" />
-          <div class="card__content flex">
-            <h3 class="day">
-              Tehran <span class="degree">35 <sup> °C</sup></span>
-            </h3>
-            <div class="weather-info flex">
-              <span>Wind speed: 11 km</span>
-              <span>Monday: 19:52</span>
-              <span>Cloudy</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/weather-icons/sunny.png" alt="" />
-          <div class="card__content flex">
-            <h3 class="day">
-              Tehran <span class="degree">35 <sup> °C</sup></span>
-            </h3>
-            <div class="weather-info flex">
-              <span>Wind speed: 11 km</span>
-              <span>Monday: 19:52</span>
-              <span>Cloudy</span>
-            </div>
-          </div>
+      <div class="location flex">
+        <div class="location-title flex" id="location-title"></div>
+        <div class="current-location flex" id="current-location" data-current-location-btn>
+          <i
+            class="fa-solid fa-location-crosshairs"
+            style="font-size: 2rem"
+          ></i>
+          <h3>Current Location</h3>
         </div>
       </div>
+
+      <div class="cards flex" id="cards"></div>
+      <div class="display"></div>
     </section>
 
     <section class="filter-section">
@@ -294,6 +233,5 @@
         </div>
       </div>
     </section>
-    <script src="index.js"></script>
   </body>
 </html>

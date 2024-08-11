@@ -7,6 +7,8 @@
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
+  --outline: #4a7a91;
+
 
   /* font-sizes */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
@@ -22,6 +24,30 @@
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+
+
+   /**
+   * BOX SHADOW
+   */
+
+   --shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
+   --shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
+ 
+   /**
+    * BORDER RADIUS
+    */
+ 
+   --radius-28: 28px;
+   --radius-16: 16px;
+   --radius-pill: 500px;
+   --radius-circle: 50%;
+ 
+   /**
+    * TRANSITION
+    */
+ 
+   --transition-short: 100ms ease;
+ 
 }
 
 @media (min-width: 35em) {
@@ -93,6 +119,9 @@ textarea,
 select {
   font: inherit;
 }
+
+li { list-style: none; }
+
 
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
@@ -543,10 +572,22 @@ header {
     padding: 0;
     list-style-type: none;
   }
+
+  .location {
+    flex-direction: column;
+    
+  }
+
+
 }
 
+
+.location > *{
+  z-index: -10;
+  }
+
 /* Search  Section*/
-.search,
+.search-view,
 .filter-lg {
   position: relative;
   display: flex;
@@ -559,11 +600,12 @@ header {
   background-color: #24343d;
 }
 
-.search {
+.search-view {
   max-width: 400px;
 }
 
-.search .search-input {
+.search-view .search-input {
+  position: relative;
   flex-grow: 1;
   background-color: transparent;
   border: none;
@@ -577,14 +619,15 @@ header {
   }
 }
 
-.search button {
+.search-view button {
   position: absolute;
-  right: 5px;
+  bottom: 25%;
+  right: 1%;
   background-color: transparent;
   border: none;
   color: #fff;
   font-size: 2.4rem;
-  line-height: 2.4rem;
+  line-height: 1rem;
   vertical-align: middle;
   transition: color 0.25s;
   cursor: pointer;
@@ -593,7 +636,138 @@ header {
   }
 }
 
+
+/* Updated Search thing */
+/* 
+.search-result,
+.search-view:not(:focus-within) .search-result { display: none; } */
+
+
+.search-view,
+.search-view.active {
+  display: block;
+  position: relative;
+  animation: none;
+  background-color: #24343d;
+}
+
+.search-input,
+.search-view .view-list { background-color: #24343d; }
+.search-view:focus-within .search-result.active { display: block;}
+
+
+
+.search-view:hover{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.search-view .view-list {
+  position: absolute;
+  top: 82%;
+  left: 0;
+  width: 100%;
+  max-height: 360px;
+  border-radius: 0 0 var(--radius-28) var(--radius-28);
+  border-block-start: 1px solid var(--outline);
+   overflow-y: auto; /* Only for firefox */
+  overflow-y: overlay;
+  z-index: 100;
+}
+
+
+
+.search-view .view-list:empty {min-height: 120px;}
+
+.search-view .view-list::-webkit-scrollbar-button {height: 20px;}
+
+
+.search-view:is(:hover, :has(.view-list):hover) {
+  filter: drop-shadow(0px 1px 3px hsla(199, 19%, 66%, 0.5));
+}
+
+.search-view:is(:focus-within, :has(.view-list):focus-within) {
+  filter: drop-shadow(0px 1px 3px hsla(200, 100%, 50%, 0.5));
+}
+
+
+
+.search-view .view-list { padding-block: 8px 16px; }
+
+.search-view .search-result .view-item {
+  position: relative;
+  height: 56px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  padding-inline: 16px 24px;
+  margin-left: -40px;
+  overflow-y: hidden;
+}
+
+.search-view .view-item :is(.m-icon, .item-subtitle) {
+  margin-top: -20px;
+}
+
+.search-view {
+  position: relative;
+  z-index: 10;
+}
+
+
+
+.search-result {
+  display: none;
+}
+
+.search-result.active {
+  display: block;
+}
+.has-state:hover::before { background-color: hsla(0, 0%, 100%, 0.04); }
+
+.view-item .m-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.search-view .view-item .item-link {
+  position: absolute;
+  inset: 0;
+  box-shadow: none;
+}
+
+.item-subtitle {
+  font-size: 1rem;
+  color: #85888c;
+}
+
+
+
 /* Cards */
+
+.location {
+  justify-content: space-between;
+  margin-block: 2em;
+  white-space: nowrap;
+  align-items: center;
+  z-index: -10;
+}
+
+.current-location {
+  background-color: #24343d;
+  border-radius: 100px;
+  cursor: pointer;
+  padding-inline: 16px 24px;
+  z-index: 100000;
+}
+
+.current-location:hover {
+  filter: drop-shadow(0px 1px 3px hsla(199, 19%, 66%, 0.5));
+}
+
+
 
 /* General styles */
 .cards {
@@ -611,10 +785,10 @@ header {
   border-radius: 20px;
   padding-top: 200px;
   padding-bottom: 20px;
-  padding-inline: 52px;
+  padding-inline: 32px;
   width: 327px;
   min-height: 440px;
-  margin-bottom: 5rem;
+  margin-block: 4rem;
 }
 
 /* Pseudo-element for blurring background */
@@ -631,20 +805,22 @@ header {
 }
 
 /* Image positioning */
-.card img {
+.card .weather-img {
   z-index: 1;
   position: absolute;
-  bottom: 250px;
+  bottom:380px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   filter: drop-shadow(-5mm 0 2.125rem rgb(155, 149, 157));
+  width: 150px;
+  height: 150px;
 }
 
 /* Card content styling */
 .card__content {
-  margin-top: -3em;
+  margin-top: -7em;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -652,15 +828,27 @@ header {
   gap: 2em;
 }
 
-.card__content h3 {
+.card__content >h3 {
   font-family: poppins;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: hsl(var(--clr-white));
   font-weight: bold;
 }
 
 .card__content .day .degree {
+  white-space: nowrap;
   font-weight: lighter;
+}
+
+.card__content .day-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  font-family: poppins;
+  font-size: 2rem;
+  color: hsl(var(--clr-white));
+  font-weight: bold;
 }
 
 .card__content .weather-info {
@@ -668,9 +856,21 @@ header {
   align-items: start;
   gap: 0.5em;
   margin-top: -3rem;
+  white-space: nowrap;
   font-size: 25px;
 }
-
+.weather-info span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.weather-info > span:last-child {
+  align-self: center;
+  margin-top: 20px;
+  margin-inline: auto;
+  align-items: center;
+  margin-left: 50%;
+}
 @media (min-width: 768px) {
   .cards {
     display: grid;
@@ -748,7 +948,7 @@ header {
 
 .arrow {
   position: absolute;
-  right: 1.5rem;
+  right: 10%;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -788,4 +988,13 @@ header {
   .filter-lg .filter-text {
     font-size: 27px;
   }
+
+  .filter-lg:hover {
+    filter: drop-shadow(0px 1px 3px hsla(199, 19%, 66%, 0.5));
+  }
+}
+
+
+.search-result {
+  display: block;
 }

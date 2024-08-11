@@ -1,0 +1,126 @@
+{
+    "forecasts": [
+      {
+        "location": "Nairobi, Kenya",
+        "days": [
+          {"date": "2024-08-01", "temperature": 25, "wind_speed": 10, "condition": "Cloudy"},
+          {"date": "2024-08-02", "temperature": 26, "wind_speed": 12, "condition": "Cloudy"},
+          {"date": "2024-08-03", "temperature": 24, "wind_speed": 11, "condition": "Cloudy"},
+          {"date": "2024-08-04", "temperature": 27, "wind_speed": 9, "condition": "Sunny"},
+          {"date": "2024-08-05", "temperature": 28, "wind_speed": 8, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 26, "wind_speed": 10, "condition": "Cloudy"}
+        ]
+      },
+      {
+        "location": "New York, USA",
+        "days": [
+          {"date": "2024-08-01", "temperature": 30, "wind_speed": 15, "condition": "Sunny"},
+          {"date": "2024-08-02", "temperature": 32, "wind_speed": 16, "condition": "Sunny"},
+          {"date": "2024-08-03", "temperature": 31, "wind_speed": 14, "condition": "Sunny"},
+          {"date": "2024-08-04", "temperature": 29, "wind_speed": 12, "condition": "Partly Cloudy"},
+          {"date": "2024-08-05", "temperature": 28, "wind_speed": 13, "condition": "Partly Cloudy"},
+          {"date": "2024-08-06", "temperature": 30, "wind_speed": 14, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Tokyo, Japan",
+        "days": [
+          {"date": "2024-08-01", "temperature": 29, "wind_speed": 12, "condition": "Partly Cloudy"},
+          {"date": "2024-08-02", "temperature": 30, "wind_speed": 11, "condition": "Sunny"},
+          {"date": "2024-08-03", "temperature": 31, "wind_speed": 13, "condition": "Sunny"},
+          {"date": "2024-08-04", "temperature": 32, "wind_speed": 14, "condition": "Sunny"},
+          {"date": "2024-08-05", "temperature": 33, "wind_speed": 15, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 34, "wind_speed": 16, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Sydney, Australia",
+        "days": [
+          {"date": "2024-08-01", "temperature": 18, "wind_speed": 9, "condition": "Cloudy"},
+          {"date": "2024-08-02", "temperature": 19, "wind_speed": 10, "condition": "Cloudy"},
+          {"date": "2024-08-03", "temperature": 20, "wind_speed": 11, "condition": "Partly Cloudy"},
+          {"date": "2024-08-04", "temperature": 21, "wind_speed": 12, "condition": "Partly Cloudy"},
+          {"date": "2024-08-05", "temperature": 22, "wind_speed": 13, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 23, "wind_speed": 14, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "London, UK",
+        "days": [
+          {"date": "2024-08-01", "temperature": 22, "wind_speed": 10, "condition": "Cloudy"},
+          {"date": "2024-08-02", "temperature": 23, "wind_speed": 12, "condition": "Cloudy"},
+          {"date": "2024-08-03", "temperature": 24, "wind_speed": 13, "condition": "Partly Cloudy"},
+          {"date": "2024-08-04", "temperature": 25, "wind_speed": 14, "condition": "Partly Cloudy"},
+          {"date": "2024-08-05", "temperature": 26, "wind_speed": 11, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 27, "wind_speed": 10, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Paris, France",
+        "days": [
+          {"date": "2024-08-01", "temperature": 26, "wind_speed": 11, "condition": "Sunny"},
+          {"date": "2024-08-02", "temperature": 27, "wind_speed": 10, "condition": "Sunny"},
+          {"date": "2024-08-03", "temperature": 28, "wind_speed": 9, "condition": "Sunny"},
+          {"date": "2024-08-04", "temperature": 29, "wind_speed": 12, "condition": "Sunny"},
+          {"date": "2024-08-05", "temperature": 30, "wind_speed": 14, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 31, "wind_speed": 13, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Cairo, Egypt",
+        "days": [
+          {"date": "2024-08-01", "temperature": 35, "wind_speed": 10, "condition": "Sunny"},
+          {"date": "2024-08-02", "temperature": 36, "wind_speed": 11, "condition": "Sunny"},
+          {"date": "2024-08-03", "temperature": 37, "wind_speed": 12, "condition": "Sunny"},
+          {"date": "2024-08-04", "temperature": 38, "wind_speed": 14, "condition": "Sunny"},
+          {"date": "2024-08-05", "temperature": 39, "wind_speed": 13, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 40, "wind_speed": 15, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Beijing, China",
+        "days": [
+          {"date": "2024-08-01", "temperature": 28, "wind_speed": 13, "condition": "Partly Cloudy"},
+          {"date": "2024-08-02", "temperature": 29, "wind_speed": 14, "condition": "Partly Cloudy"},
+          {"date": "2024-08-03", "temperature": 30, "wind_speed": 15, "condition": "Sunny"},
+          {"date": "2024-08-04", "temperature": 31, "wind_speed": 16, "condition": "Sunny"},
+          {"date": "2024-08-05", "temperature": 32, "wind_speed": 17, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 33, "wind_speed": 18, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Moscow, Russia",
+        "days": [
+          {"date": "2024-08-01", "temperature": 20, "wind_speed": 12, "condition": "Cloudy"},
+          {"date": "2024-08-02", "temperature": 21, "wind_speed": 11, "condition": "Cloudy"},
+          {"date": "2024-08-03", "temperature": 22, "wind_speed": 10, "condition": "Cloudy"},
+          {"date": "2024-08-04", "temperature": 23, "wind_speed": 13, "condition": "Partly Cloudy"},
+          {"date": "2024-08-05", "temperature": 24, "wind_speed": 14, "condition": "Partly Cloudy"},
+          {"date": "2024-08-06", "temperature": 25, "wind_speed": 15, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Rio de Janeiro, Brazil",
+        "days": [
+          {"date": "2024-08-01", "temperature": 28, "wind_speed": 10, "condition": "Sunny"},
+          {"date": "2024-08-02", "temperature": 29, "wind_speed": 11, "condition": "Sunny"},
+          {"date": "2024-08-03", "temperature": 30, "wind_speed": 12, "condition": "Sunny"},
+          {"date": "2024-08-04", "temperature": 31, "wind_speed": 13, "condition": "Sunny"},
+          {"date": "2024-08-05", "temperature": 32, "wind_speed": 14, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 33, "wind_speed": 15, "condition": "Sunny"}
+        ]
+      },
+      {
+        "location": "Mogadishu, Somalia",
+        "days": [
+          {"date": "2024-08-01", "temperature": 28, "wind_speed": 10, "condition": "Sunny"},
+          {"date": "2024-08-02", "temperature": 29, "wind_speed": 11, "condition": "Sunny"},
+          {"date": "2024-08-03", "temperature": 30, "wind_speed": 12, "condition": "Sunny"},
+          {"date": "2024-08-04", "temperature": 31, "wind_speed": 13, "condition": "Sunny"},
+          {"date": "2024-08-05", "temperature": 32, "wind_speed": 14, "condition": "Sunny"},
+          {"date": "2024-08-06", "temperature": 33, "wind_speed": 15, "condition": "Sunny"}
+        ]
+      }
+    ]
+  }
+  
