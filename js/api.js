@@ -1,6 +1,6 @@
 "use strict";
 
-const api_key = process.env.OPEN_WEATHER_API_KEY;
+const api_key = f66873c3467442f180eda451dbc27c34;
 export const fetchData = async (URL) => {
     try {
         const res = await fetch(`${URL}&appid=${api_key}`);
