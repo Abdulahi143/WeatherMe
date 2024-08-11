@@ -1,9 +1,5 @@
 "use strict";
 
-import dotenv from "dotenv";
-
-dotenv.config();
-
 const api_key = process.env.OPEN_WEATHER_API_KEY;
 export const fetchData = async (URL) => {
     try {
