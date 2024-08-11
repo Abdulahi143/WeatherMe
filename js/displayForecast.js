@@ -85,7 +85,7 @@ export const displayForecast = (forecast, location) => {
       <div class="card__content flex">
       <div class="day-div"
         <h3 class="day">
-          Today <span class="degree">${parseInt(temp)}&degC</span>
+          ${weekDayName} <span class="degree">  ${parseInt(temp)}&degC</span>
         </h3>
         </div>
         <div class="weather-info flex">

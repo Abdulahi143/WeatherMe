@@ -849,6 +849,7 @@ header {
   font-size: 2rem;
   color: hsl(var(--clr-white));
   font-weight: bold;
+  gap: 1rem;
 }
 
 .card__content .weather-info {
