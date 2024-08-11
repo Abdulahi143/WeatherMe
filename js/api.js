@@ -1,10 +1,13 @@
 "use strict";
 
-import config from "../config.js";
+import dotenv from "dotenv";
 
+dotenv.config();
+
+const api_key = process.env.OPEN_WEATHER_API_KEY;
 export const fetchData = async (URL) => {
     try {
-        const res = await fetch(`${URL}&appid=${config.api_key}`);
+        const res = await fetch(`${URL}&appid=${api_key}`);
         if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
         const data = await res.json();
         return data;
